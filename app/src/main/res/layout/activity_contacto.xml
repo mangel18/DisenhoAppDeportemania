@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactoActivity">
+
+    <TextView
+        android:id="@+id/tvTituloContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradiente"
+        android:text="CONTACTO"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Campo para introducir nombre completo -->
+
+
+    <!-- Campo para introducir el correo electrónico -->
+    <EditText
+        android:id="@+id/etNombreApellido"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8B4EFA"
+        android:hint="Introduce tu nombre completo"
+        android:layout_marginTop="80dp"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloContacto" />
+
+    <EditText
+        android:id="@+id/etCorreoElectronico"
+        android:backgroundTint="#8B4EFA"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Introduce tu correo electrónico"
+        android:textStyle="italic"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreApellido" />
+
+
+    <!-- Campo para introducir el número de teléfono -->
+    <EditText
+        android:id="@+id/etNumeroTelefono"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#8B4EFA"
+        android:hint="Introduce un número de teléfono"
+        android:textStyle="italic"
+        android:inputType="phone"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreoElectronico" />
+
+    <!-- Campo para introducir comentarios -->
+    <EditText
+        android:id="@+id/etComentarios"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#8B4EFA"
+        android:hint="Déjanos algún comentario"
+        android:textStyle="italic"
+        android:inputType="phone"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumeroTelefono" />
+
+    <!-- Botón para enviar -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bnEnviarComentarios"
+        android:layout_width="121dp"
+        android:layout_height="57dp"
+        android:background="@drawable/gradiente"
+        android:layout_marginTop="40dp"
+        android:text="ENVIAR"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etComentarios" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
