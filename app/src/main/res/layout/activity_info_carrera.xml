@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoCarrera">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/svInfoCarrera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Titulo de la carrera -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvNombreCarrera"
+                android:background="@drawable/gradiente_cuadrado"
+                android:fontFamily="@font/alfaslabone"
+                android:text="6A CARRERA ITC"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white" />
+
+            <!-- Imagen de la carrera -->
+            <ImageView
+                android:id="@+id/ivFotoCarrera"
+                android:layout_marginVertical="20dp"
+                android:layout_width="259dp"
+                android:layout_height="276dp"
+                app:srcCompat="@drawable/carrera"
+                android:layout_gravity="center"/>
+
+            <!-- Texto de fecha -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvTextoFecha"
+                android:text="Fecha"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- Fecha que se pondra en la BDD -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvIngresarFecha"
+                android:text="26/03/23"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- Texto de la hora -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvTextoHora"
+                android:text="Hora"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- Hora que se pondra en la BDD -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvIngresarHora"
+                android:text="7:00 - 11:00"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- Texto de la ubicacion -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvTextoUbicacion"
+                android:text="Ubicación"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- Ubicacion que se pondra en la BDD -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvIngresarUbicacion"
+                android:text="Ciudad Madero, México"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <!-- INFROMACIÓN -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- CONVOCATORIA -->
+                <TextView
+                    android:id="@+id/tvConvocatoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/alfaslabone"
+                    android:text="CONVOCATORIA"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <!-- ==================================================-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- PROTOCOLO -->
+                <ImageView
+                    android:id="@+id/ivProtocolo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/protocolo" />
+
+                <TextView
+                    android:id="@+id/tvProtocolo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toEndOf="@+id/ivProtocolo"
+                    android:fontFamily="@font/alfaslabone"
+                    android:text="PROTOCOLO"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvProtocolo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/ivProtocolo"
+                    android:text="@string/texto_protocolo" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- INSCRIPCIONES -->
+                <TextView
+                    android:id="@+id/tvInscripciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/alfaslabone"
+                    android:text="INSCRIPCIONES"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- PROTOCOLO -->
+                <ImageView
+                    android:id="@+id/ivInscripciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/inscripciones" />
+
+                <TextView
+                    android:id="@+id/tvTextoInscripcionesPT1"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/ivInscripciones"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/inscripciones_pt1"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvTextoInscripcionesPT2"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTextoInscripcionesPT1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_toEndOf="@+id/ivInscripciones"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/inscripciones_pt2"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

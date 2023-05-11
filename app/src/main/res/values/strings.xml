@@ -1,10 +1,18 @@
 <resources>
     <string name="app_name">RegistroDeUsuario</string>
     <string name="info_de_deportemania">Organizamos eventos deportivos como carreras atléticas, duatlón, triatlón, carreras ciclistas, aguas abiertas y carreras trail para todas las edades. Nos encargamos de todo para que nuestros clientes no tengan que preocuparse de nada. Deportemanía dispone de las últimas tecnologías en cronometraje electrónico deportivo. Los sistemas que manejamos nos permite ofrecer la mejor solución adaptada a las características de cada evento. El servicio de cronometraje con chip garantiza la mayor calidad, lo que se traduce en importantes ventajas para el evento y un grado de satisfacción elevado para los participantes. Podemos ayudarte a diseñar una adecuada estrategia de comunicación, tanto online (en redes sociales e internet en general) como offline (métodos, tradicionales en físico). Nuestro objetivo es organizar un evento que trascienda a nivel nacional.</string>
+    <string name="texto_protocolo">Debido a la contingencia sanitaria y en cumplimiento de las disposiciones oficiales, en nuestros eventos estamos aplicando una serie de protocolos para cuidar tu salud y la de todos, ayúdanos a cuidarnos.</string>
+    <string name="inscripciones_pt1">Es importante que al llenar tu ficha de inscripción proporciones todos los datos requeridos en el formato de inscripción.</string>
+    <string name="inscripciones_pt2"><b>Puntos de Inscripción:</b>\n
+        <li>Klass Spor sucursal 3 arcos y Altama.</li>\n
+        <li>Pinturas Prisa sucursal plaza Corona.</li>\n
+        <li>Oficinas administrativas del ICT.</li> </string>
+
 
     <array name="spinner_items">
         <item>Elige una vista</item>
         <item>Log in</item>
         <item>Contacto</item>
+        <item>InfoCarrera</item>
     </array>
 </resources>

@@ -1,13 +1,10 @@
 package edu.iest.registrodeusuario;
 
-import static edu.iest.registrodeusuario.TextoGradiente.setGradientText;
+import static edu.iest.registrodeusuario.TextoGradiente.GradienteAMR;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.LinearGradient;
-import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +17,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import edu.iest.registrodeusuario.TextoGradiente;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -52,13 +48,13 @@ public class Registro extends AppCompatActivity {
 
         //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
         TextView tvGenero = findViewById(R.id.tvGenero);
-        setGradientText(tvGenero, "Género");
+        GradienteAMR(tvGenero, "Género");
 
         TextView rbMasculino = findViewById(R.id.rbMasculino);
-        setGradientText(rbMasculino, "Masculino");
+        GradienteAMR(rbMasculino, "Masculino");
 
         TextView rbFemenino = findViewById(R.id.rbFemenino);
-        setGradientText(rbFemenino, "Femenino");
+        GradienteAMR(rbFemenino, "Femenino");
 
 // y así sucesivamente para cada TextView que quieras actualizar
 
@@ -88,6 +84,10 @@ public class Registro extends AppCompatActivity {
                     case "Contacto":
                         Intent intent1 = new Intent(Registro.this, ContactoActivity.class);
                         startActivity(intent1);
+                        break;
+                    case "InfoCarrera":
+                        Intent intent2= new Intent(Registro.this, InfoCarrera.class);
+                        startActivity(intent2);
                         break;
                 }
             }

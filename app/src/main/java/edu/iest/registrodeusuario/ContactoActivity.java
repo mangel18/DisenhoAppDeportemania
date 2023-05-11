@@ -1,7 +1,7 @@
 package edu.iest.registrodeusuario;
 
 import androidx.appcompat.app.AppCompatActivity;
-import static edu.iest.registrodeusuario.TextoGradiente.setGradientText;
+import static edu.iest.registrodeusuario.TextoGradiente.GradienteAMR;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ public class ContactoActivity extends AppCompatActivity {
 
         //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
         TextView tvTituloContacto = findViewById(R.id.tvTituloContacto);
-        setGradientText(tvTituloContacto, "CONTACTO");
+        GradienteAMR(tvTituloContacto, "CONTACTO");
 
     }
 

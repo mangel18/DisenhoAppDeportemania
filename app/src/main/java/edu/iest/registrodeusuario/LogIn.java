@@ -1,13 +1,15 @@
 package edu.iest.registrodeusuario;
 
 import androidx.appcompat.app.AppCompatActivity;
-import static edu.iest.registrodeusuario.TextoGradiente.setGradientText;
+import static edu.iest.registrodeusuario.TextoGradiente.GradienteAMR;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class LogIn extends AppCompatActivity {
@@ -19,7 +21,17 @@ public class LogIn extends AppCompatActivity {
 
         //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
         TextView tvNoTienesCuenta = findViewById(R.id.tvNoTienesCuenta);
-        setGradientText(tvNoTienesCuenta, "¿Aún no tienes cuenta?");
+        GradienteAMR(tvNoTienesCuenta, "¿Aún no tienes cuenta?");
+
+        Button bnRegistrarse = findViewById(R.id.bnRegistrarse);
+        bnRegistrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogIn.this, Registro.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
