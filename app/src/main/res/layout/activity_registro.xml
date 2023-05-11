@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:hint="Nombre Completo"
+        android:fontFamily="@font/alfaslabone"
         android:inputType="textPersonName"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="Fecha de Nacimiento"
+        android:fontFamily="@font/alfaslabone"
         android:inputType="date"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:hint="Correo Electrónico"
+        android:fontFamily="@font/alfaslabone"
         android:inputType="textEmailAddress"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,6 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:buttonTint="#8B4EFA"
+            android:fontFamily="@font/alfaslabone"
             android:text="Masculino" />
 
         <!-- Boton de género femenino -->
@@ -90,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:buttonTint="#8B4EFA"
+            android:fontFamily="@font/alfaslabone"
             android:text="Femenino" />
 
     </RadioGroup>
@@ -102,6 +107,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#8B4EFA"
         android:hint="Ciudad de Residencia"
+        android:fontFamily="@font/alfaslabone"
         android:inputType="textCapWords"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,6 +123,7 @@
         android:layout_marginTop="8dp"
         android:backgroundTint="#8B4EFA"
         android:hint="Contraseña"
+        android:fontFamily="@font/alfaslabone"
         android:inputType="textPassword"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +139,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#8B4EFA"
         android:hint="Número de teléfono"
+        android:fontFamily="@font/alfaslabone"
         android:inputType="phone"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,10 +150,11 @@
     <!-- Botón para guardar los datos de registros -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bnRegistrarse"
-        android:layout_width="121dp"
-        android:layout_height="57dp"
+        android:layout_width="140dp"
+        android:layout_height="61dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/gradiente"
+        android:fontFamily="@font/alfaslabone"
         android:text="REGISTRARSE"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,8 +167,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Género"
-        android:textColor="@color/black"
+        android:fontFamily="@font/alfaslabone"
         android:textSize="18sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"

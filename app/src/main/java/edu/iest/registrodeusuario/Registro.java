@@ -1,8 +1,13 @@
 package edu.iest.registrodeusuario;
 
+import static edu.iest.registrodeusuario.TextoGradiente.setGradientText;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +19,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
+import edu.iest.registrodeusuario.TextoGradiente;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -43,6 +50,19 @@ public class Registro extends AppCompatActivity {
         bnRegistrarse = findViewById(R.id.bnRegistrarse);
         spinnerItems = findViewById(R.id.spinner_items);
 
+        //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
+        TextView tvGenero = findViewById(R.id.tvGenero);
+        setGradientText(tvGenero, "Género");
+
+        TextView rbMasculino = findViewById(R.id.rbMasculino);
+        setGradientText(rbMasculino, "Masculino");
+
+        TextView rbFemenino = findViewById(R.id.rbFemenino);
+        setGradientText(rbFemenino, "Femenino");
+
+// y así sucesivamente para cada TextView que quieras actualizar
+
+
         // Crear un adapter para el spinner usando el array definido en el archivo de strings
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.spinner_items, android.R.layout.simple_spinner_item);
@@ -64,6 +84,10 @@ public class Registro extends AppCompatActivity {
                     case "Log in":
                         Intent intent = new Intent(Registro.this, LogIn.class);
                         startActivity(intent);
+                        break;
+                    case "Contacto":
+                        Intent intent1 = new Intent(Registro.this, ContactoActivity.class);
+                        startActivity(intent1);
                         break;
                 }
             }
