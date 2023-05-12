@@ -42,7 +42,6 @@ public class GetResults {
     public static void signin(){
         APIInterface api = Api.getClient();
 
-
         Signup user = new Signup("Michiel Horstman", "m.horstman@gmail.com", "14/08/1999", "Male", "Tampico", "12345", "8333121802");
         Call<Signup> call = api.createUser(user);
 

@@ -5,7 +5,9 @@ import static edu.iest.registrodeusuario.TextoGradiente.GradienteAMR;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +22,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import edu.iest.registrodeusuario.models.Signup;
+import edu.iest.registrodeusuario.network.APIInterface;
+import edu.iest.registrodeusuario.network.Api;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Registro extends AppCompatActivity {
     private EditText etNombreApellido;
     private EditText etFechaNacimiento;
@@ -28,6 +37,8 @@ public class Registro extends AppCompatActivity {
     private EditText etCiudadResidencia;
     private EditText etContrasena;
     private Button bnRegistrarse;
+
+    private EditText etTelefono;
     private Spinner spinnerItems;
 
 
@@ -45,6 +56,7 @@ public class Registro extends AppCompatActivity {
         etContrasena = findViewById(R.id.etContrasena);
         bnRegistrarse = findViewById(R.id.bnRegistrarse);
         spinnerItems = findViewById(R.id.spinner_items);
+        etTelefono =findViewById(R.id.etNumeroTelefono);
 
         //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
         TextView tvGenero = findViewById(R.id.tvGenero);
@@ -142,13 +154,48 @@ public class Registro extends AppCompatActivity {
         String correoElectronico = etCorreoElectronico.getText().toString();
         String ciudadResidencia = etCiudadResidencia.getText().toString();
         String contrasena = etContrasena.getText().toString();
+        String numero = etTelefono.getText().toString();
         int radioButtonId = rgSexo.getCheckedRadioButtonId();
         RadioButton radioButton = findViewById(radioButtonId);
         String sexo = radioButton.getText().toString();
 
         // Aquí puedes implementar la lógica para guardar los datos en tu base de datos o en otro lugar
         // Puedes usar las variables creadas arriba (nombreApellido, fechaNacimiento, correoElectronico, ciudadResidencia, contrasena, sexo)
+        APIInterface api = Api.getClient();
 
+        Signup user = new Signup(nombreApellido,
+                correoElectronico, fechaNacimiento, sexo,
+                ciudadResidencia, contrasena, numero);
+        Call<Signup> call = api.createUser(user);
+
+        call.enqueue(new Callback<Signup>() {
+            @Override
+            public void onResponse(Call<Signup> call, Response<Signup> response) {
+                Signup info= response.body();
+                if (info != null) {
+                    Log.e("checker", info.getToken());
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+                    SharedPreferences.Editor myedit = sharedPreferences.edit();
+                    myedit.putString("id", info.getId());
+                    myedit.putString("token", info.getToken());
+                    myedit.putBoolean("isLogged", true);
+                    myedit.commit();
+                    Intent intent = new Intent(Registro.this, Perfil.class);
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Signup> call, Throwable t) {
+                if (t != null && t.getMessage() != null) {
+                    Log.e("checker", t.getMessage().toString());
+                } else {
+                    Log.e("checker", "Error desconocido");
+                }
+
+            }
+        });
     }
 
     @Override
