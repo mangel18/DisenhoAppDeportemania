@@ -61,7 +61,7 @@ public class InfoCarrera extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_eventos:
-                startActivity(new Intent(this, LogIn.class));
+                startActivity(new Intent(this, MainActivity.class));
                 return true;
             case R.id.menu_perfil:
                 startActivity(new Intent(this, Perfil.class));
@@ -73,6 +73,4 @@ public class InfoCarrera extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 }

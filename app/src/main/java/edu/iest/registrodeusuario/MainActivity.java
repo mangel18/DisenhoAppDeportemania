@@ -1,32 +1,20 @@
 package edu.iest.registrodeusuario;
 
-import static edu.iest.registrodeusuario.TextoGradiente.GradienteMorado;
-import static edu.iest.registrodeusuario.TextoGradiente.GradienteRosa;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-public class Perfil extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil);
-
-        //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
-
-        TextView tvInfoAdicional = findViewById(R.id.tvInfoAdicional);
-        GradienteMorado(tvInfoAdicional, "INFORMACIÓN ADICIONAL");
-
-        TextView tvCarrerasPasadas = findViewById(R.id.tvCarrerasPasadas);
-        GradienteRosa(tvCarrerasPasadas, "CARRERAS PASADAS");
-
+        setContentView(R.layout.activity_main);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,6 +39,5 @@ public class Perfil extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 
 }

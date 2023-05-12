@@ -93,6 +93,10 @@ public class Registro extends AppCompatActivity {
                         Intent intent3= new Intent(Registro.this, Perfil.class);
                         startActivity(intent3);
                         break;
+                    case "Eventos":
+                        Intent intent4= new Intent(Registro.this, MainActivity.class);
+                        startActivity(intent4);
+                        break;
                 }
             }
 
@@ -159,7 +163,7 @@ public class Registro extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_eventos:
-                startActivity(new Intent(this, LogIn.class));
+                startActivity(new Intent(this, MainActivity.class));
                 return true;
             case R.id.menu_perfil:
                 startActivity(new Intent(this, Perfil.class));
