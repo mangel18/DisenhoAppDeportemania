@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvInscripcion"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="36dp"
+                android:text="INSCRIPCIÓN"
+                android:textSize="30dp"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/white"
+                android:background="@drawable/gradiente_cuadrado"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRCNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="NOMBRE DE LA CARRERA"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInscripcion" />
+
+            <TextView
+                android:id="@+id/tvInfoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:textSize="20dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:text="Tu información"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRCNombre" />
+
+            <EditText
+                android:id="@+id/etRCNombreUsuario"
+                android:hint="Nombre de usuario"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:focusable="false"
+                android:fontFamily="@font/roboto"
+
+                android:editable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.252"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoUsuario" />
+            <EditText
+                android:id="@+id/etRCFechadeNacimiento"
+                android:hint="Fecha de nacimeinto"
+                android:layout_width="300dp"
+                android:focusable="false"
+                android:fontFamily="@font/roboto"
+
+                android:editable="false"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.252"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etRCNombreUsuario" />
+            <EditText
+                android:id="@+id/etRCCiudad"
+                android:hint="Ciudad"
+                android:focusable="false"
+                android:fontFamily="@font/roboto"
+
+                android:editable="false"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.252"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etRCFechadeNacimiento" />
+            <EditText
+                android:id="@+id/etRNumero"
+                android:hint="Numero"
+                android:focusable="false"
+                android:fontFamily="@font/roboto"
+
+                android:editable="false"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.252"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etRCCiudad" />
+
+            <TextView
+                android:id="@+id/tvAviso"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="12dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/morado"
+                android:text="*Si desea cambiar sus datos, diríjase a la opción 'Cambiar Datos'"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etRNumero" />
+
+            <Spinner
+                android:id="@+id/spDistancia"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.115"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAviso" />
+
+            <EditText
+                android:id="@+id/etREquipo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Equipo al que perteneces"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.324"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spDistancia" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                android:layout_width="140dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="47dp"
+                android:layout_marginBottom="5dp"
+                android:text="Inscribirse"
+                android:background="@drawable/gradiente"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etREquipo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
