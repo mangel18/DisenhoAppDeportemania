@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="6dp">
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/ivCarrera"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -29,7 +29,7 @@
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp"
                 app:srcCompat="@drawable/carrera"
-                android:layout_alignParentLeft="true"/>
+                android:layout_alignParentLeft="true"/>-->
             <LinearLayout
                 android:id="@+id/ly_cv"
                 android:layout_width="wrap_content"
@@ -37,47 +37,42 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="2dp"
-                android:layout_toEndOf="@+id/ivCarrera"
                 android:orientation="vertical"
-                android:layout_marginLeft="4dp"
-                android:layout_toRightOf="@+id/ivCarrera">
-
+                android:layout_marginLeft="4dp">
                 <TextView
                     android:id="@+id/tvNombre"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:fontFamily="@font/alfaslabone"
-                    android:text="6A CARRERA ITC"
+                    android:layout_marginBottom="2dp"
+                    android:text="6A CARRERA ICT"
                     android:textColor="@color/morado"
-                    android:textSize="24dp" />
+                    android:fontFamily="@font/alfaslabone"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/tvFecha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="10/05/2023"
-                    android:fontFamily="@font/roboto"
                     android:textColor="@color/black"
+                    android:fontFamily="@font/roboto"
                     android:layout_marginTop="5dp"
                     android:textSize="18sp"/>
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/bnVerMas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="6dp"
-                android:layout_marginEnd="6dp"
+                android:id="@+id/btVmas"
+                android:layout_width="140dp"
+                android:layout_height="61dp"
                 android:background="@drawable/gradiente"
-                android:text="ver más"
                 android:fontFamily="@font/alfaslabone"
                 android:textColor="@color/white"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:text="ver más"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"/>
-
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"/>
         </RelativeLayout>
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>
