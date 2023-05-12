@@ -37,5 +37,13 @@ public class InfoCarrera extends AppCompatActivity {
         TextView tvInscripciones = findViewById(R.id.tvInscripciones);
         GradienteRosa(tvInscripciones, "INSCRIPCIONES");
 
+        TextView tvInfoGeneral = findViewById(R.id.tvInfoGeneral);
+        GradienteRosa(tvInfoGeneral, "INFORMACIÓN GENERAL");
+
+        TextView tvEntregaDeKits = findViewById(R.id.tvEntregaDeKits);
+        GradienteMorado(tvEntregaDeKits, "ENTREGA DE KITS");
+
+        TextView tvFAQ = findViewById(R.id.tvFAQ);
+        GradienteRosa(tvFAQ, "PREGUNTAS FRECUENTES");
     }
 }

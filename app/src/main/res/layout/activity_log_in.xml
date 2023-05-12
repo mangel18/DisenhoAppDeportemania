@@ -6,93 +6,109 @@
     android:layout_height="match_parent"
     tools:context=".LogIn">
 
-    <!-- LOGO de deportemania -->
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="305dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/deportemanialogo" />
-
-    <!-- Campo para introducir el correo electrónico -->
-
-    <!-- Campo para introducir contraseña -->
-    <EditText
-        android:id="@+id/etCorreoElectronico"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="#8B4EFA"
-        android:hint="Correo Electrónico"
-        android:fontFamily="@font/alfaslabone"
-        android:inputType="textEmailAddress"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
-
-    <EditText
-        android:id="@+id/etContrasena"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#8B4EFA"
-        android:layout_marginTop="70dp"
-        android:hint="Contraseña"
-        android:fontFamily="@font/alfaslabone"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCorreoElectronico" />
-
-    <!-- Botón para guardar los datos de registros -->
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bnLogIn"
-        android:layout_width="140dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/gradiente"
-        android:text="Iniciar Sesión"
-        android:fontFamily="@font/alfaslabone"
-        android:textColor="@color/white"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContrasena" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvNoTienesCuenta"
-        android:layout_marginTop="12dp"
-        android:text="¿Aún no tienes cuenta?"
-        android:fontFamily="@font/alfaslabone"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bnLogIn" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <!-- Botón para registrarse -->
+            <!-- LOGO de deportemania -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="305dp"
+                android:layout_height="146dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/deportemanialogo" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bnRegistrarse"
-        android:layout_width="140dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/gradiente"
-        android:text="Registrarse"
-        android:fontFamily="@font/alfaslabone"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNoTienesCuenta" />
+            <!-- Campo para introducir el correo electrónico -->
+
+            <!-- Campo para introducir contraseña -->
+            <EditText
+                android:id="@+id/etCorreoElectronico"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:backgroundTint="#8B4EFA"
+                android:fontFamily="@font/alfaslabone"
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+            <EditText
+                android:id="@+id/etContrasena"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:backgroundTint="#8B4EFA"
+                android:fontFamily="@font/alfaslabone"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCorreoElectronico" />
+
+            <!-- Botón para guardar los datos de registros -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bnLogIn"
+                android:layout_width="140dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/gradiente"
+                android:fontFamily="@font/alfaslabone"
+                android:text="Iniciar Sesión"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etContrasena" />
+
+            <TextView
+                android:id="@+id/tvNoTienesCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/alfaslabone"
+                android:text="¿Aún no tienes cuenta?"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bnLogIn" />
+
+            <!-- Botón para registrarse -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bnRegistrarse"
+                android:layout_width="140dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/gradiente"
+                android:fontFamily="@font/alfaslabone"
+                android:text="Registrarse"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNoTienesCuenta" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/tvIngresarFecha"
-                android:text="26/03/23"
+                android:text="DD/MM/AAAA"
                 android:fontFamily="@font/roboto"
                 android:textColor="@color/black"
                 android:layout_marginTop="5dp"
@@ -112,6 +112,24 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
                 />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bnRegistrarseCarrera"
+                android:layout_width="140dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gradiente"
+                android:text="Registrarse"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
 
             <!-- INFROMACIÓN -->
             <LinearLayout
@@ -243,6 +261,155 @@
                     android:textColor="@color/black" />
 
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- PROTOCOLO -->
+                <ImageView
+                    android:id="@+id/ivDetallesEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/detalles" />
+
+                <TextView
+                    android:id="@+id/tvDetallesEvento"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/ivDetallesEvento"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/eventos"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <!-- INFROMACIÓN -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- INFORMACIÓN GENERAL -->
+                <TextView
+                    android:id="@+id/tvInfoGeneral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/alfaslabone"
+                    android:text="INFORMACIÓN GENERAL"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- ENTREGA DE KITS -->
+                <ImageView
+                    android:id="@+id/ivCalendario"
+                    android:layout_width="84dp"
+                    android:layout_height="77dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/calendario" />
+
+                <TextView
+                    android:id="@+id/tvEntregaDeKits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toEndOf="@+id/ivCalendario"
+                    android:fontFamily="@font/alfaslabone"
+                    android:text="ENTREGA DE KITS"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEntregaDeKits"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/ivCalendario"
+                    android:text="@string/texto_entregaKits" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- FAQ -->
+            <TextView
+                android:id="@+id/tvFAQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/alfaslabone"
+                android:text="PREGUNTAS FRECUENTES"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <!-- ==================================================-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- FAQ -->
+
+            <ImageView
+                android:id="@+id/ivFaq"
+                android:layout_width="84dp"
+                android:layout_height="77dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/faq" />
+
+            <TextView
+                android:layout_width="267dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/ivFaq"
+                android:fontFamily="@font/roboto"
+                android:text="@string/texto_faq"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
 
 
         </LinearLayout>
