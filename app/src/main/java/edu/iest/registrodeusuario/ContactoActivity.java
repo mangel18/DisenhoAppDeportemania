@@ -16,9 +16,7 @@ public class ContactoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
 
-        //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
-        TextView tvTituloContacto = findViewById(R.id.tvTituloContacto);
-        GradienteAMR(tvTituloContacto, "CONTACTO");
+
 
     }
 

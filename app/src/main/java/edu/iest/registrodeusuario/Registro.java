@@ -148,7 +148,6 @@ public class Registro extends AppCompatActivity {
 
         // Aquí puedes implementar la lógica para guardar los datos en tu base de datos o en otro lugar
         // Puedes usar las variables creadas arriba (nombreApellido, fechaNacimiento, correoElectronico, ciudadResidencia, contrasena, sexo)
-        // por ejemplo, puedes hacer uso de
 
     }
 

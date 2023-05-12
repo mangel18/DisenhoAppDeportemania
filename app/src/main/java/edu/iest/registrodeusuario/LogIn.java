@@ -2,6 +2,8 @@ package edu.iest.registrodeusuario;
 
 import androidx.appcompat.app.AppCompatActivity;
 import static edu.iest.registrodeusuario.TextoGradiente.GradienteAMR;
+import edu.iest.registrodeusuario.network.GetResults;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +19,10 @@ public class LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+
+        // Llamada al método index() de la clase GetResults
+        GetResults.index();
+
 
         //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
         TextView tvNoTienesCuenta = findViewById(R.id.tvNoTienesCuenta);
