@@ -89,6 +89,10 @@ public class Registro extends AppCompatActivity {
                         Intent intent2= new Intent(Registro.this, InfoCarrera.class);
                         startActivity(intent2);
                         break;
+                    case "Perfil":
+                        Intent intent3= new Intent(Registro.this, Perfil.class);
+                        startActivity(intent3);
+                        break;
                 }
             }
 
@@ -146,19 +150,26 @@ public class Registro extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
+    // Manejar las selecciones del menú
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_home:
-                Intent intent = new Intent(this, Registro.class);
-                startActivity(intent);
+            case R.id.menu_eventos:
+                startActivity(new Intent(this, LogIn.class));
+                return true;
+            case R.id.menu_perfil:
+                startActivity(new Intent(this, Perfil.class));
+                return true;
+            case R.id.menu_contacto:
+                startActivity(new Intent(this, ContactoActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

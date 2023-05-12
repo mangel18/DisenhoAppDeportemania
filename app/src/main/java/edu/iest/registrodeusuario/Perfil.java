@@ -1,7 +1,9 @@
 package edu.iest.registrodeusuario;
 
+import static edu.iest.registrodeusuario.TextoGradiente.GradienteMorado;
+import static edu.iest.registrodeusuario.TextoGradiente.GradienteRosa;
+
 import androidx.appcompat.app.AppCompatActivity;
-import static edu.iest.registrodeusuario.TextoGradiente.GradienteAMR;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,16 +11,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class ContactoActivity extends AppCompatActivity {
+public class Perfil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contacto);
+        setContentView(R.layout.activity_perfil);
 
         //SE LLAMA A LA FUNCIÓN PARA DARLE EL COLOR DE GRADIENTE AL TEXTO Y SE LE ESTABLECE EL TEXTO DESEADO
-        TextView tvTituloContacto = findViewById(R.id.tvTituloContacto);
-        GradienteAMR(tvTituloContacto, "CONTACTO");
+        TextView tvNombreUsuario = findViewById(R.id.tvUsuario);
+        GradienteRosa(tvNombreUsuario, "NOMBRE DE USUARIO");
+
+        TextView tvInfoAdicional = findViewById(R.id.tvInfoAdicional);
+        GradienteMorado(tvInfoAdicional, "INFORMACIÓN ADICIONAL");
+
+        TextView tvCarrerasPasadas = findViewById(R.id.tvCarrerasPasadas);
+        GradienteMorado(tvCarrerasPasadas, "CARRERAS PASADAS");
 
     }
 

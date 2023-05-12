@@ -3,7 +3,6 @@ package edu.iest.registrodeusuario;
 import androidx.appcompat.app.AppCompatActivity;
 import static edu.iest.registrodeusuario.TextoGradiente.GradienteAMR;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,26 +30,30 @@ public class LogIn extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
+    // Inflar el menú de opciones
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
+    // Manejar las selecciones del menú
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_home:
-                Intent intent = new Intent(this, Registro.class);
-                startActivity(intent);
+            case R.id.menu_eventos:
+                startActivity(new Intent(this, LogIn.class));
+                return true;
+            case R.id.menu_perfil:
+                startActivity(new Intent(this, Perfil.class));
+                return true;
+            case R.id.menu_contacto:
+                startActivity(new Intent(this, ContactoActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }

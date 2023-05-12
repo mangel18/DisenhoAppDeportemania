@@ -7,7 +7,10 @@ import static edu.iest.registrodeusuario.TextoGradiente.GradienteMorado;
 import static edu.iest.registrodeusuario.TextoGradiente.GradienteRosa;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 
@@ -46,4 +49,30 @@ public class InfoCarrera extends AppCompatActivity {
         TextView tvFAQ = findViewById(R.id.tvFAQ);
         GradienteRosa(tvFAQ, "PREGUNTAS FRECUENTES");
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    // Manejar las selecciones del menú
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_eventos:
+                startActivity(new Intent(this, LogIn.class));
+                return true;
+            case R.id.menu_perfil:
+                startActivity(new Intent(this, Perfil.class));
+                return true;
+            case R.id.menu_contacto:
+                startActivity(new Intent(this, ContactoActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
 }

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perfil">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- Perfil de usuario -->
+            <LinearLayout
+                android:id="@+id/profileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- LOGO de deportemania -->
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="305dp"
+                    android:layout_height="146dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/deportemanialogo" />
+
+
+            </LinearLayout>
+
+            <!-- Nombre de usuario -->
+            <TextView
+                android:id="@+id/tvUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de Usuario"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/black"
+                android:layout_below="@id/profileLayout"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- Otra información del perfil -->
+            <TextView
+                android:id="@+id/tvInfoAdicional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información adicional"
+                android:textSize="16sp"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/black"
+                android:layout_below="@id/tvUsuario"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- Carreras pasadas -->
+            <LinearLayout
+                android:id="@+id/pastRacesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:fontFamily="@font/alfaslabone"
+                android:textColor="@color/black"
+                android:layout_below="@id/tvInfoAdicional"
+                android:layout_marginTop="16dp">
+
+                <!-- Título de las carreras pasadas -->
+                <TextView
+                    android:id="@+id/tvCarrerasPasadas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alfaslabone"
+                    android:textColor="@color/black"
+                    android:text="Carreras Pasadas"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Lista de carreras pasadas -->
+                <ListView
+                    android:id="@+id/CarrerasPasadas"
+                    android:layout_width="match_parent"
+                    android:layout_height="254dp"
+                    android:fontFamily="@font/alfaslabone"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
